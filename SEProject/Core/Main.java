@@ -13,12 +13,7 @@ public class Main {
         database.addUser(new User("Victoria","Brown","vbrown321","A3mL35aB3!!klMi345",Role.PTT_DIRECTOR));
         database.addUser(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
         database.addUser(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
-
-        database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
-        database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
-        database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
-        database.addClass(new Class("Cooking", Skill.COOKING));
-
+        
         login();
 
         if(loggedInUser instanceof Teacher){
