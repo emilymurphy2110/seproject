@@ -55,6 +55,6 @@ public class Main {
         System.out.println("Enter password:");
         String pw = sc.nextLine();
         return new User(fn,ln,un,pw,Role.ADMINISTRATOR);
-    }
-
+  }
 }
+  
