@@ -30,7 +30,7 @@ public class LoginView {
 		username = new JTextField();
 		password = new JPasswordField();
 		login = new JButton("Login");
-		login.addActionListener(new LoginButtonListener());
+		login.addActionListener(new LoginButtonListener(this));
 		
 		// Set positions and sizes of labels, and then add to frame
 		usernameLabel.setBounds(80, 100, 120, 30);
