@@ -1,4 +1,4 @@
-package Core;
+package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,5 +19,4 @@ public enum Role {
     public ArrayList<Permission> getPermissions(){
         return this.permissions;
     }
-
 }

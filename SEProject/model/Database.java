@@ -1,4 +1,4 @@
-package Core;
+package model;
 
 import java.util.ArrayList;
 
@@ -17,7 +17,7 @@ public class Database {
         return null;
     }
 
-    public static ArrayList<Class> getClasses() {
+    public ArrayList<Class> getClasses() {
         return classes;
     }
 
