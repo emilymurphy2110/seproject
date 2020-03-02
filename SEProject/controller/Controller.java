@@ -1,8 +1,18 @@
-package model;
+package controller;
 
 import java.util.Scanner;
 
-public class Main {
+import javax.swing.SwingUtilities;
+
+import model.Class;
+import model.Database;
+import model.Role;
+import model.Skill;
+import model.Teacher;
+import model.User;
+import views.LoginView;
+
+public class Controller {
 	
 	public static User loggedInUser;
     public static Database database = new Database();
@@ -14,12 +24,21 @@ public class Main {
         database.addUser(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
         database.addUser(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
         
-        database.addClass(new Class("Java Programming", ClassSkillsMatch.JAVA_PROGRAMMING_1));
-        database.addClass(new Class("History of Art", ClassSkillsMatch.HISTORY_OF_ART));
-        database.addClass(new Class("Cookery", ClassSkillsMatch.COOKERY));
+        database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
+        database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
+        database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
+        database.addClass(new Class("Cooking", Skill.COOKING));
       
         
-        login();
+        //login();
+        
+        SwingUtilities.invokeLater(new Runnable() {
+        	
+        	@Override
+        	public void run() {
+        		LoginView lv = new LoginView();
+        	}
+        });
 
         if(loggedInUser instanceof Teacher){
             for (Class c : database.getClasses()){
@@ -56,5 +75,7 @@ public class Main {
         String pw = sc.nextLine();
         return new User(fn,ln,un,pw,Role.ADMINISTRATOR);
   }
+	
+	
+
 }
-  

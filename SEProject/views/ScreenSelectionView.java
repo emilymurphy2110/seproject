@@ -6,6 +6,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import controller.RequirementsButtonListener;
+import controller.TeacherButtonListener;
+
 public class ScreenSelectionView {
 	public JFrame selectionScreen;
 	public JPanel panel;
@@ -23,9 +26,9 @@ public class ScreenSelectionView {
 		panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		teacherButton = new JButton("View Teachers, Skills and Training");
-		teacherButton.addActionListener(controllerObject);
+		teacherButton.addActionListener(new TeacherButtonListener());
 		requirementsButton = new JButton("View or Review Teaching Requirements");
-		requirementsButton.addActionListener(controllerObject);
+		requirementsButton.addActionListener(new RequirementsButtonListener());
 				
 		// Add buttons to panel, and panel to JFrame
 		panel.add(teacherButton);

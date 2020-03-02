@@ -4,17 +4,13 @@ public class Class {
 	
 	private String title;
     private Skill[] requiredSkills;
-    private ClassSkillsMatch classSkills;
+    
 
-    public Class(String title, ClassSkillsMatch classSkills){
+    public Class(String title, Skill...skills){
         this.title = title;
-        this.classSkills = classSkills;
+        this.requiredSkills = skills;
     }
     
-    public void classSkills(ClassSkillsMatch classSkills) {
-    	this.classSkills = classSkills;
-    }
-
 	public boolean hasRequiredSkills(Teacher teacher){
         for(Skill s : requiredSkills){
             if(!teacher.hasSkill(s)) return false;
@@ -25,5 +21,15 @@ public class Class {
     public String getTitle() {
         return title;
     }
+    
+    public Skill[] getRequiredSkills() {
+		return requiredSkills;
+	}
+
+	public void setRequiredSkills(Skill[] requiredSkills) {
+		this.requiredSkills = requiredSkills;
+	}
+
+
 
 }

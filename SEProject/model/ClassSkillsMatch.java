@@ -7,7 +7,7 @@ public enum ClassSkillsMatch {
 	
 	JAVA_PROGRAMMING_1(new Skill[] {Skill.IT}),
 	JAVA_PROGRAMMING_2(new Skill[] {Skill.IT}),
-	PHP_PROGRAMMING(new Skill[] {Skill.IT}),
+	PHP_PROGRAMMING(new Skill[] {Skill.IT, Skill.HISTORY}),
 	SOCIAL_WORK(new Skill[] {Skill.PSYCHOLOGY, Skill.SOCIOLOGY}),
 	CREATIVE_WRITING(new Skill[] {Skill.ENGLISH}),
 	TRANSLATION_1(new Skill[] {Skill.ENGLISH, Skill.FRENCH, Skill.GERMAN}),

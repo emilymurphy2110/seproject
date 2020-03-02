@@ -5,6 +5,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import controller.TeacherSubmitListener;
+import controller.TeacherUploadListener;
+
 public class TeacherView {
 	public JFrame teacherScreen;
 	public JLabel teacher1Label, teacher2Label, teacher3Label;
@@ -67,10 +70,10 @@ public class TeacherView {
 		// Create Teacher buttons and set location and size
 		teacherUpload = new JButton("Upload");
 		teacherUpload.setBounds(40, 20, 120, 30);
-		teacherUpload.addActionListener(controllerObject);
+		teacherUpload.addActionListener(new TeacherUploadListener());
 		teacherSubmit = new JButton("Submit");
 		teacherSubmit.setBounds(40, 70, 120, 30);
-		teacherSubmit.addActionListener(controllerObject);
+		teacherSubmit.addActionListener(new TeacherSubmitListener());
 		
 		// Add all components to frame
 		teacherScreen.add(teacher1Label);

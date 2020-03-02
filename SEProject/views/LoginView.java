@@ -3,7 +3,10 @@ package views;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+
+import controller.LoginButtonListener;
 
 public class LoginView {
 	public JFrame loginScreen;
@@ -18,6 +21,7 @@ public class LoginView {
 		loginScreen.setSize(400,400); // Set JFrame size
 		loginScreen.setLocation(200,100); // Set JFrame location
 		loginScreen.setTitle("Login"); // Set JFrame title
+		loginScreen.setVisible(true);
 		loginScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Create login labels, input fields and button
@@ -26,7 +30,7 @@ public class LoginView {
 		username = new JTextField();
 		password = new JPasswordField();
 		login = new JButton("Login");
-		login.addActionListener(controllerObject);
+		login.addActionListener(new LoginButtonListener());
 		
 		// Set positions and sizes of labels, and then add to frame
 		usernameLabel.setBounds(80, 100, 120, 30);
