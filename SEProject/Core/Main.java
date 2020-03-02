@@ -14,6 +14,11 @@ public class Main {
         database.addUser(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
         database.addUser(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
         
+        database.addClass(new Class("Java Programming", ClassSkillsMatch.JAVA_PROGRAMMING_1));
+        database.addClass(new Class("History of Art", ClassSkillsMatch.HISTORY_OF_ART));
+        database.addClass(new Class("Cookery", ClassSkillsMatch.COOKERY));
+      
+        
         login();
 
         if(loggedInUser instanceof Teacher){

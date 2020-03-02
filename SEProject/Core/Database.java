@@ -17,7 +17,7 @@ public class Database {
         return null;
     }
 
-    public static ArrayList<Class> getClasses() {
+    public ArrayList<Class> getClasses() {
         return classes;
     }
 
