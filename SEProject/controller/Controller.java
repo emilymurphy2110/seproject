@@ -10,7 +10,9 @@ import model.Role;
 import model.Skill;
 import model.Teacher;
 import model.User;
+import views.InitialView;
 import views.LoginView;
+import views.Window;
 
 public class Controller {
 	
@@ -36,7 +38,7 @@ public class Controller {
         	
         	@Override
         	public void run() {
-        		LoginView lv = new LoginView();
+        		InitialView start = new InitialView();
         	}
         });
 

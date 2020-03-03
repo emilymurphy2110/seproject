@@ -1,47 +1,37 @@
 package views;
 
+
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
 import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
 
-import controller.LoginButtonListener;
+import controller.LoginController;
 
-public class LoginView {
-	public JFrame loginScreen;
-	public JLabel usernameLabel, passwordLabel;
-	public JTextField username, password;
+public class LoginView extends Window {
+	public JLabel welcomeLabel;
 	public JButton login;
+	public JPanel view; 
+	public LoginController controller;
+	public Window window;
 	
 	public LoginView() {
-		// Create JFrame and set details
-		loginScreen = new JFrame();
-		loginScreen.setLayout(null);
-		loginScreen.setSize(400,400); // Set JFrame size
-		loginScreen.setLocation(200,100); // Set JFrame location
-		loginScreen.setTitle("Login"); // Set JFrame title
-		loginScreen.setVisible(true);
-		loginScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		// Create login labels, input fields and button
-		usernameLabel = new JLabel("Username");
-		passwordLabel = new JLabel("Password");
-		username = new JTextField();
-		password = new JPasswordField();
+		String[] role = {"Administrator", "PTT Director"};
+		view = new JPanel();
+		view.setSize(600, 600);
+		welcomeLabel = new JLabel("Please select your role");
 		login = new JButton("Login");
-		login.addActionListener(new LoginButtonListener());
+		login.addActionListener(controller);
+		JComboBox selection = new JComboBox(role);
+		selection.addActionListener(controller);
 		
 		// Set positions and sizes of labels, and then add to frame
-		usernameLabel.setBounds(80, 100, 120, 30);
-		passwordLabel.setBounds(80, 150, 120, 30);
-		username.setBounds(220, 100, 120, 30);
-		password.setBounds(220, 150, 120, 30);
-		login.setBounds(140,220, 120, 30);
-		loginScreen.add(usernameLabel);
-		loginScreen.add(passwordLabel);
-		loginScreen.add(username);
-		loginScreen.add(password);
-		loginScreen.add(login);
+		welcomeLabel.setBounds(200, 100, 200, 30);
+		selection.setBounds(200, 150, 200, 30);
+		login.setBounds(200 ,200, 200, 30);
+//		view.add(welcomeLabel);
+//		view.add(login);
+//		view.add(selection);
 	}
+	
 }
