@@ -20,6 +20,7 @@ public class Controller {
     public static Database database = new Database();
 
     public static void main(String[] args) {
+    	database.addUser(new User("admin","admin","admin","admin",Role.ADMINISTRATOR));
         database.addUser(new User("Peter","Black","pblack1","sugarbaby123",Role.ADMINISTRATOR));
         database.addUser(new User("John","Green","jwhite1888","catbird555",Role.CLASS_DIRECTOR));
         database.addUser(new User("Victoria","Brown","vbrown321","A3mL35aB3!!klMi345",Role.PTT_DIRECTOR));
@@ -53,7 +54,8 @@ public class Controller {
         }
     }
 
-    public static void login(){
+    // CLI Login for testing
+    public static void loginCLI(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter user name:");
         String un = sc.nextLine();
@@ -64,7 +66,13 @@ public class Controller {
         if(loggedInUser != null) System.out.println("Welcome, " + loggedInUser.getFirstName());
         else System.out.println("Nope");
     }
+   
+    public static boolean loginGUI(String username, String password) {
+    	loggedInUser = database.loginUser(username, password);
+    	return loggedInUser != null;
+    }
 
+    // createUser method used in testing
     public static User createUser(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter first name:");

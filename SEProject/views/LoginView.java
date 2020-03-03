@@ -21,9 +21,14 @@ public class LoginView extends Window {
 		view.setSize(600, 600);
 		welcomeLabel = new JLabel("Please select your role");
 		login = new JButton("Login");
+    //Tom ActionListener
 		login.addActionListener(controller);
 		JComboBox selection = new JComboBox(role);
 		selection.addActionListener(controller);
+
+    //Emilys ActionListener
+		//login.addActionListener(new LoginButtonListener(this));
+
 		
 		// Set positions and sizes of labels, and then add to frame
 		welcomeLabel.setBounds(200, 100, 200, 30);

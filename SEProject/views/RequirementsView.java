@@ -18,6 +18,7 @@ public class RequirementsView {
 		requirementsScreen.setSize(800,800); // Set JFrame size
 		requirementsScreen.setLocation(200,100); // Set JFrame location
 		requirementsScreen.setTitle("Requirements"); // Set JFrame title
+		requirementsScreen.setVisible(true);
 		requirementsScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// Create teacher labels and set Location and Size

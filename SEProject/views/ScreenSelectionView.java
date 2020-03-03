@@ -17,9 +17,10 @@ public class ScreenSelectionView {
 	public ScreenSelectionView() {
 		// Create JFrame and set details
 		selectionScreen = new JFrame();
-		selectionScreen.setSize(400,400); // Set JFrame size
+		selectionScreen.setSize(800,800); // Set JFrame size
 		selectionScreen.setLocation(200,100); // Set JFrame location
 		selectionScreen.setTitle("Selection"); // Set JFrame title
+		selectionScreen.setVisible(true);
 		selectionScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				
 		// Create Panels and Buttons (with actionListeners)

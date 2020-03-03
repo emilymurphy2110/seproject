@@ -6,6 +6,7 @@ public class Database {
 	
 	private static ArrayList<User> users = new ArrayList<>();
     private static ArrayList<Class> classes = new ArrayList<>();
+    private static ArrayList<TrainingRequest> requests = new ArrayList<>();
 
     public User loginUser(String username, String password){
         for(User u : users){
