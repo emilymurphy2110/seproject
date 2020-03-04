@@ -2,9 +2,11 @@ package model;
 
 import java.util.ArrayList;
 
+import controller.Hasher;
+
 public class User {
 	
-	private String firstName, lastName, userName, password;
+	private String firstName = "firstName", lastName = "lastName", userName = "userName", password;
 
     private Role role;
     private ArrayList<Permission> perms = new ArrayList<>();

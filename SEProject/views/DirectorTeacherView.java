@@ -5,25 +5,20 @@ import java.awt.BorderLayout;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.JTextField;
 
 import controller.BackButtonListener;
 import controller.Controller;
 import controller.Database;
-import controller.TeacherSubmitListener;
-import controller.TeacherUploadListener;
 import model.Teacher;
-import model.User;
+import model.TrainingRequest;
 
-public class TeacherView extends JPanel {
+public class DirectorTeacherView extends JPanel {
 	
 	private BorderLayout layout = new BorderLayout();
 	
-	public TeacherView() {
+	public DirectorTeacherView() {
 		
 		this.setLayout(layout);
 		
@@ -39,8 +34,9 @@ public class TeacherView extends JPanel {
 		JScrollPane scrollPane = new JScrollPane(listPanel);
 		
 		listPanel.setLayout(new BoxLayout(listPanel, BoxLayout.Y_AXIS));
-		for(Teacher t : Database.getTeachers()) {
-			listPanel.add(new TeacherListItem(t));
+		
+		for(TrainingRequest t : Database.getRequests()) {
+			listPanel.add(new DirectorTeacherViewItem(t),0);
 		}
 		
 		listPanel.add(Box.createVerticalGlue());

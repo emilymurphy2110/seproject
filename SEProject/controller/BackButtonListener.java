@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
+import views.DirectorTeacherView;
 import views.ScreenSelectionView;
+import views.TeacherDataView;
 import views.TeacherView;
 
 public class BackButtonListener implements ActionListener {
@@ -19,8 +21,11 @@ public class BackButtonListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if(currentPanel instanceof TeacherView) {
 			new ScreenSelectionView();
+		} else if(currentPanel instanceof TeacherDataView) {
+			new TeacherView();
+		} else if(currentPanel instanceof DirectorTeacherView) {
+			new ScreenSelectionView();
 		}
-
 	}
 
 }

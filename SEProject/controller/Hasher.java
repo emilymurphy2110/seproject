@@ -1,4 +1,11 @@
-package model;
+/***************************************************************************************
+*    Title: How to Securely Store a Password in Java
+*    Author: Andrew
+*    Date: 06/12/18
+*    Availability: https://dev.to/awwsmm/how-to-encrypt-a-password-in-java-42dh
+*
+***************************************************************************************/
+package controller;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;

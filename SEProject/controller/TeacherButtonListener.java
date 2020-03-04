@@ -12,9 +12,6 @@ public class TeacherButtonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
 		TeacherView tv = new TeacherView();
-
 	}
-
 }

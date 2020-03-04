@@ -5,7 +5,7 @@ import java.util.Scanner;
 import javax.swing.SwingUtilities;
 
 import model.Class;
-import model.Database;
+import controller.Database;
 import model.Role;
 import model.Skill;
 import model.Teacher;
@@ -34,10 +34,10 @@ public class Controller {
         Database.addTeacher(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
         Database.addTeacher(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
         
-        database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
-        database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
-        database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
-        database.addClass(new Class("Cooking", Skill.COOKING));
+//        database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
+//        database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
+//        database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
+//        database.addClass(new Class("Cooking", Skill.COOKING));
       
         frame = new JFrame();
 		frame.setSize(height, width); // Set JFrame size

@@ -8,6 +8,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import controller.Controller;
+import controller.Database;
 import controller.LoginButtonListener;
 
 public class LoginView extends JPanel {
@@ -17,6 +18,13 @@ public class LoginView extends JPanel {
 	public JButton login;
 	
 	public LoginView() {
+		
+		// automatic login
+		if(Controller.loginGUI("admin", "admin")) {
+			ScreenSelectionView ssv = new ScreenSelectionView();
+			Database.init();
+		}
+		
 		this.setSize(Controller.height, Controller.width);
 		// Create JFrame and set details
 //		loginScreen = new JFrame();
@@ -47,5 +55,6 @@ public class LoginView extends JPanel {
 		this.add(username);
 		this.add(password);
 		this.add(login);
+		
 	}
 }

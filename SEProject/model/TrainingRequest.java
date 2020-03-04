@@ -1,5 +1,7 @@
 package model;
 
+import controller.Controller;
+
 public class TrainingRequest {
 	private User submittedBy;
 	private Teacher teacher;
@@ -17,6 +19,8 @@ public class TrainingRequest {
 	public void answer(User user, boolean answer) {
 		this.directorAnswer = user;
 		this.accepted = answer;
+		
+		Controller.database.saveRequests();
 	}
 
 	public User getSubmittedBy() {

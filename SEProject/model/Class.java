@@ -4,10 +4,12 @@ public class Class {
 	
 	private String title;
     private Skill[] requiredSkills;
+    private Teacher teacher;
     
 
-    public Class(String title, Skill...skills){
+    public Class(String title, Teacher teacher, Skill...skills){
         this.title = title;
+        this.teacher = teacher;
         this.requiredSkills = skills;
     }
     
@@ -18,7 +20,21 @@ public class Class {
         return true;
     }
 
-    public String getTitle() {
+	
+	
+    public Teacher getTeacher() {
+		return teacher;
+	}
+
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getTitle() {
         return title;
     }
     
