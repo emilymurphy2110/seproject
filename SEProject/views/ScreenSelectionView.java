@@ -31,9 +31,9 @@ public class ScreenSelectionView extends JPanel {
 		Controller.frame.setSize(Controller.height, Controller.width);
 		
 		this.setLayout(new GridLayout(0,2));
-		teacherButton = new JButton("View Teachers, Skills and Training");
+		teacherButton = new JButton("ADMINISTRATOR: View Teachers, Skills and Training");
 		teacherButton.addActionListener(new TeacherButtonListener());
-		requirementsButton = new JButton("View or Review Teaching Requirements");
+		requirementsButton = new JButton("PTT DIRECTOR: View or Review Teaching Requirements");
 		requirementsButton.addActionListener(new RequirementsButtonListener());
 				
 		// Add buttons to panel, and panel to JFrame

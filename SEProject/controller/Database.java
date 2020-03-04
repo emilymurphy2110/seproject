@@ -78,8 +78,7 @@ public class Database {
                  //System.out.println("teacher name " + vals[0]);
                  
                  //create teacher object
-                 Teacher t = new Teacher(vals[0].split(" ")[0],
-            			 vals[0].split(" ")[1], "n/a", "n/a", null);
+                 Teacher t = new Teacher(vals[0].split(" ")[0],vals[0].split(" ")[1], "n/a", "n/a", null);
                  
                  // add skills
                  for(int i = 1; i < vals.length; i++) {
@@ -170,9 +169,6 @@ public class Database {
     	return null;
     }
 
-    public void saveData(){
-        //save data to disk
-    }
 
 	public static Class[] getClassesByTeacher(Teacher teacher) {
 		ArrayList<Class> classes = new ArrayList<>();
