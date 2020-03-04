@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Database {
 	
 	private static ArrayList<User> users = new ArrayList<>();
+	private static ArrayList<Teacher> teachers = new ArrayList<>();
     private static ArrayList<Class> classes = new ArrayList<>();
     private static ArrayList<TrainingRequest> requests = new ArrayList<>();
 
@@ -16,6 +17,18 @@ public class Database {
         }
 
         return null;
+    }
+    
+    public static void addTeacher(Teacher t) {
+    	teachers.add(t);
+    }
+    
+    public static ArrayList<Teacher> getTeachers() {
+    	return teachers;
+    }
+    
+    public static ArrayList<User> getUsers() {
+    	return users;
     }
 
     public ArrayList<Class> getClasses() {

@@ -11,35 +11,48 @@ import model.Skill;
 import model.Teacher;
 import model.User;
 import views.LoginView;
+import views.ScreenSelectionView;
+import views.TeacherView;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
 public class Controller {
 	
 	public static User loggedInUser;
     public static Database database = new Database();
+    public static JFrame frame;
+    public static final int height = 800;
+    public static final int width = 600;
+    
 
     public static void main(String[] args) {
     	database.addUser(new User("admin","admin","admin","admin",Role.ADMINISTRATOR));
         database.addUser(new User("Peter","Black","pblack1","sugarbaby123",Role.ADMINISTRATOR));
         database.addUser(new User("John","Green","jwhite1888","catbird555",Role.CLASS_DIRECTOR));
         database.addUser(new User("Victoria","Brown","vbrown321","A3mL35aB3!!klMi345",Role.PTT_DIRECTOR));
-        database.addUser(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
-        database.addUser(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
+        Database.addTeacher(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
+        Database.addTeacher(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
         
         database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
         database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
         database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
         database.addClass(new Class("Cooking", Skill.COOKING));
       
+        frame = new JFrame();
+		frame.setSize(height, width); // Set JFrame size
+		frame.setLocation(200,100); // Set JFrame location
+		frame.setTitle("Teaching System"); // Set JFrame title
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         //login();
+		
+		LoginView lv = new LoginView();
+		frame.getContentPane().add(lv);
+		frame.setVisible(true);
         
-        SwingUtilities.invokeLater(new Runnable() {
-        	
-        	@Override
-        	public void run() {
-        		LoginView lv = new LoginView();
-        	}
-        });
+  
 
         if(loggedInUser instanceof Teacher){
             for (Class c : database.getClasses()){

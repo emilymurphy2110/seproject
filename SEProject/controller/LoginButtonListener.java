@@ -22,16 +22,11 @@ public class LoginButtonListener implements ActionListener {
 		String password = lv.password.getText();
 		boolean success = Controller.loginGUI(username, password);
 		if(success) {
-			 SwingUtilities.invokeLater(new Runnable() {
-		        	
-		        	@Override
-		        	public void run() {
-		        		ScreenSelectionView ssv = new ScreenSelectionView();
-		        	}
-		        });
+			ScreenSelectionView ssv = new ScreenSelectionView();
+		  }
 		}
 		
 		
 	}
 
-}
+

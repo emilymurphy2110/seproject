@@ -12,13 +12,9 @@ public class RequirementsButtonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		SwingUtilities.invokeLater(new Runnable() {
-        	
-        	@Override
-        	public void run() {
-        		RequirementsView rv = new RequirementsView();
-        	}
-        });
+
+		RequirementsView rv = new RequirementsView();
+
 	}
 
 }

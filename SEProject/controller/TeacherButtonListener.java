@@ -12,14 +12,9 @@ public class TeacherButtonListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		SwingUtilities.invokeLater(new Runnable() {
-        	
-        	@Override
-        	public void run() {
-        		TeacherView tv = new TeacherView();
-        	}
-        });
-		
+
+		TeacherView tv = new TeacherView();
+
 	}
 
 }

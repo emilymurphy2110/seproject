@@ -3,23 +3,31 @@ package views;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class RequirementsView {
-	public JFrame requirementsScreen;
+import controller.Controller;
+
+public class RequirementsView extends JPanel {
+	
 	public JLabel r1Label, r2Label, r3Label;
 	public JTextField requirement1, requirement2, requirement3, requirement4, requirement5, rt1, rt2, rt3, rt4, rt5;
 	public JButton rUpload, rSubmit, approve1, approve2, approve3, approve4, approve5, reject1, reject2, reject3, reject4, reject5;
 
 	public RequirementsView() {
 		// Create JFrame and set details
-		requirementsScreen = new JFrame();
-		requirementsScreen.setLayout(null);
-		requirementsScreen.setSize(800,800); // Set JFrame size
-		requirementsScreen.setLocation(200,100); // Set JFrame location
-		requirementsScreen.setTitle("Requirements"); // Set JFrame title
-		requirementsScreen.setVisible(true);
-		requirementsScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		requirementsScreen = new JFrame();
+//		requirementsScreen.setLayout(null);
+//		requirementsScreen.setSize(800,800); // Set JFrame size
+//		requirementsScreen.setLocation(200,100); // Set JFrame location
+//		requirementsScreen.setTitle("Requirements"); // Set JFrame title
+//		requirementsScreen.setVisible(true);
+//		requirementsScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Controller.frame.getContentPane().removeAll();
+		Controller.frame.getContentPane().add(this);
+		Controller.frame.pack();
+		Controller.frame.setSize(Controller.height, Controller.width);
 		
 		// Create teacher labels and set Location and Size
 		r1Label = new JLabel("Requirements");
