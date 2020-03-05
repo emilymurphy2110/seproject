@@ -4,3 +4,7 @@
 /TeacherView.class
 /RequirementsView.class
 /TeacherListItem.class
+/DirectorTeacherView.class
+/DirectorTeacherViewItem.class
+/TeacherDataView.class
+/ViewTeacherDataButtonListener.class

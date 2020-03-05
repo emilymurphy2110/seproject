@@ -1,9 +1,10 @@
-package views;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import model.Teacher;
+import views.TeacherDataView;
 
 public class ViewTeacherDataButtonListener implements ActionListener {
 
