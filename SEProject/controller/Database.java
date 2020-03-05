@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,6 +16,8 @@ import model.Skill;
 import model.Teacher;
 import model.TrainingRequest;
 import model.User;
+
+// This class is for importing and writing to files
 
 public class Database {
 	

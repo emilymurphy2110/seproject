@@ -34,6 +34,7 @@ public class Controller {
         Database.addTeacher(new Teacher("Mark","Yellow","myellow2134","ilovetrucks",Skill.COOKING));
         Database.addTeacher(new Teacher("Holly", "Blue", "hblue2000", "cookie5", Skill.HISTORY, Skill.IT));
         
+        // Used for testing before classes were imported, won't work anymore.
 //        database.addClass(new Class("Java Programming 1", Skill.COOKING, Skill.IT));
 //        database.addClass(new Class("Java Programming 2", Skill.COOKING, Skill.IT));
 //        database.addClass(new Class("PHP programming", Skill.HISTORY, Skill.IT));
@@ -54,6 +55,7 @@ public class Controller {
         
   
 
+		// Used for testing to show permissions working
         if(loggedInUser instanceof Teacher){
             for (Class c : database.getClasses()){
                 if(c.hasRequiredSkills((Teacher) loggedInUser)){

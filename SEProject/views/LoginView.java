@@ -26,7 +26,7 @@ public class LoginView extends JPanel {
 		}
 		
 		this.setSize(Controller.height, Controller.width);
-		// Create JFrame and set details
+// 		Create JFrame and set details
 //		loginScreen = new JFrame();
 //		loginScreen.setLayout(null);
 //		loginScreen.setSize(400,400); // Set JFrame size

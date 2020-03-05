@@ -42,7 +42,6 @@ public class DirectorTeacherView extends JPanel {
 		listPanel.add(Box.createVerticalGlue());
 		this.add(scrollPane, BorderLayout.CENTER);
 		
-		// Add all components to frame
 	}
 
 }
